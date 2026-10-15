@@ -67,20 +67,9 @@
     100% { transform: scale(1); opacity: 1; }
 }
 
-@keyframes floatScrollbarHeart {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-}
-
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-15px); }
-}
-
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    20%, 60% { transform: translateX(-5px); }
-    40%, 80% { transform: translateX(5px); }
 }
 
 @keyframes badge-pop {

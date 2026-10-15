@@ -87,11 +87,10 @@ const setupMusicControls = (els) => {
     });
 
     musicToggle.addEventListener('click', (event) => {
+        event.preventDefault();
         event.stopPropagation();
         musicWidget.classList.toggle('open');
-        if (bgMusic.paused) {
-            requestPlay();
-        }
+        if (bgMusic.paused) bgMusic.pause();
     });
 
     document.addEventListener('click', (event) => {
@@ -113,8 +112,8 @@ const setupYesNoFlow = (els) => {
         "Really?", "Are you sure?", "Think again!", "Last chance...",
         "I guess you misclicked", "Come on...", "You mean yes?", "Try again?",
         "You missed the yes button!", "Changed your mind yet?",
-        "Give it another shot!", "Why not?", "Cutie, I don't allow no for an answer! 😎",
-        "No = Yes, Yes = Yes", "I think you meant yes", "Maybe you wanna try again"
+        "Give it another shot!", "Why not?", "Cutie, I don't allow no for an answer!",
+        "No = Yes, Yes = Yes :)", "I think you mean yes", "Maybe you wanna try again"
     ];
 
     const shuffleArray = (array) => {
@@ -544,9 +543,7 @@ const setupLocationNavigation = (els) => {
             for (let i = 0; i < 20; i++) {
                 setTimeout(() => createHeart(els.locationCelebration, { left: '50%', top: '50%', lifetime: 1000 }), i * 30);
             }
-            setTimeout(() => {
-                fadeSwapCards(els.locationCard, els.datetimeCard, () => sprinkleHearts(els.datetimeCelebration, 8));
-            }, 1200);
+            fadeSwapCards(els.locationCard, els.datetimeCard, () => sprinkleHearts(els.datetimeCelebration, 8));
         });
     }
 };

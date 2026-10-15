@@ -6,10 +6,10 @@
     <title>Wanna go on a date?</title>
     <link rel="icon" href="assets/images/love-letter.svg" type="image/svg+xml">
 
-    <link rel="stylesheet" href="src/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="src/css/main.css">
 
     <!-- EmailJS SDK -->
     <script type="text/javascript"
@@ -18,11 +18,12 @@
     <script type="text/javascript">
     (function(){
         emailjs.init({
-            publicKey: "qqUqDabSVIYTTeZvD",
+            publicKey: "RkWZS7vjAeAxODpDA",
         });
     })();
     </script>
 </head>
+
 <body>
     <script>
         document.body.style.overflow = 'auto';
@@ -158,7 +159,7 @@
                 <p class="question">Will you go on a date with me?</p>
                 <div class="buttons">
                     <button id="yes-btn" class="btn yes-btn">YES! ♥</button>
-                    <button id="no-btn" class="btn no-btn"><b>NO! ☹</button>
+                    <button id="no-btn" class="btn no-btn"><b>NO! :(</button>
                 </div>
             </div>
         </div>
@@ -300,7 +301,7 @@
                     </button>
                 </div>
                 <div class="selected-location-message hidden" id="selected-location-message">
-                    <p class="message">Nice choice! 💕</p>
+                    <p class="message">Nice choice!</p>
                 </div>
                 <button id="confirm-location-btn" class="btn yes-btn">Continue ♥</button>
             </div>
@@ -336,7 +337,7 @@
                 </div>
                 
                 <div class="selected-datetime-message hidden" id="selected-datetime-message">
-                    <p class="message">Perfect time! 💕</p>
+                    <p class="message">Perfect time!</p>
                     <button id="food-next-btn" class="btn yes-btn" style="margin-top: 15px; display: inline-block;">Let's Pick Some Food ♥</button>
                 </div>
             </div>
@@ -380,7 +381,7 @@
                 <button id="confirm-food-btn" class="btn yes-btn" style="display: none;">Confirm ♥</button>
 
                 <div class="final-message hidden" id="final-message">
-                    <p class="message">Let's choose some drinks too! 🥤</p>
+                    <p class="message">Let's choose some drinks too!</p>
                     <button id="drinks-next-btn" class="btn yes-btn" style="margin-top: 15px; display: inline-block;">Choose Some Drinks ♥</button>
                 </div>
             </div>
@@ -419,12 +420,13 @@
                     </button>
                 </div>
                 <div class="selected-location-message hidden" id="selected-drink-message">
-                    <p class="message">Sounds refreshing! 🥰</p>
+                    <p class="message">Sounds refreshing!</p>
                 </div>
                 <button id="confirm-drink-btn" class="btn yes-btn" style="display: none;">Confirm ♥</button>
 
                 <div class="final-message hidden" id="final-drink-message">
-                    <button id="completion-next-btn" class="btn yes-btn" style="margin-top: 15px; display: inline-block;">Finish! ♥</button>
+                    <p class="message">Let's wrap things up!</p>
+                    <button id="completion-next-btn" class="btn yes-btn" style="margin-top: 15px; display: inline-block;">Hooray! ♥</button>
                 </div>
             </div>
         </div>
@@ -435,13 +437,13 @@
             <div class="card-content">
                 <h1>Leave a <span class="special-text">note</span>...</h1>
                 <div class="sakura-divider"></div>
-                <p class="question">Anything special about you<br>that I should know?</p>
+                <p class="question">Anything special<br> I should know about you?</p>
                 <div class="note-container">
                     <textarea id="note-textarea" placeholder="Share your thoughts here... (max 150 words)" maxlength="1000"></textarea>
                     <div class="word-counter">0/150 words</div>
                 </div>
                 <div class="note-actions">
-                    <button id="save-note-btn" class="btn yes-btn">Continue ♥</button>
+                    <button id="save-note-btn" class="btn yes-btn">Finish! ♥</button>
                 </div>
             </div>
         </div>
@@ -450,12 +452,10 @@
         <div class="card hidden" id="completion-card">
             <div class="hearts-celebration" id="completion-hearts"></div>
             <div class="card-content">
-                <h1>All Set! <span class="special-text">💕</span></h1>
+                <h1><span class="special-text">💕</span> All Set! <span class="special-text">💕</span></h1>
                 <div class="sakura-divider"></div>
-                <div class="celebration-icon">🎉</div>
                 <p class="big-message">Can't wait to see you!</p>
                 <p class="message">Our date will be perfectly set.</p>
-                <p class="message">I'll make it special to the best of my ability.</p>
 
                 <div class="email-container" id="email-container">
                     <p class="email-label">Want a reminder? (optional)</p>
@@ -471,7 +471,7 @@
                     </form>
                     <p id="email-error" class="email-error">Please enter a valid email address</p>
                     <div id="email-success" class="email-success">
-                        <p>✅ Invitation sent successfully!</p>
+                        <p>Invitation sent successfully!</p>
                     </div>
                 </div>
             </div>
@@ -481,7 +481,7 @@
     </div>
 
     <audio id="bg-music" loop preload="auto">
-        <source src="assets/music/Perfect_Ed-Sheeran.mp3" type="audio/mpeg">
+        <source src="assets/Perfect_Ed-Sheeran.mp3" type="audio/mpeg">
     </audio>
 
     <script type="module" src="src/js/main.js"></script>

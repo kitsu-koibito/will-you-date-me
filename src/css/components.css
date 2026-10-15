@@ -75,20 +75,11 @@
     margin-bottom: 15px;
 }
 
-.location-arrow {
-    display: none;
-}
-
 .location-options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     margin: 20px 0;
-}
-
-.location-icon {
-    font-size: 24px;
-    margin-bottom: 10px;
 }
 
 .selected-location-message {
@@ -240,22 +231,6 @@
 * ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(45deg, #ff6b95, #ffb6c1);
     box-shadow: 0 0 8px rgba(255, 107, 149, 0.3);
-}
-
-.scrollbar-decoration {
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    width: 36px;
-    height: 36px;
-    z-index: 1000;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-
-body:hover .scrollbar-decoration {
-    opacity: 1;
 }
 
 .music-widget {
@@ -471,35 +446,6 @@ body:hover .scrollbar-decoration {
     100% { transform: translateY(0) scale(1); }
 }
 
-.scrollbar-heart {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background: var(--heart-icon) no-repeat;
-    background-size: contain;
-    animation: floatScrollbarHeart 3s ease-in-out infinite;
-}
-
-.scroll-h1 {
-    top: -5px;
-    right: 5px;
-    animation-delay: 0s;
-}
-
-.scroll-h2 {
-    top: 10px;
-    right: 0px;
-    transform: scale(0.7);
-    animation-delay: 1s;
-}
-
-.scroll-h3 {
-    top: 18px;
-    right: 8px;
-    transform: scale(0.8);
-    animation-delay: 1.5s;
-}
-
 .custom-btn {
     position: relative;
     overflow: hidden;
@@ -515,10 +461,6 @@ body:hover .scrollbar-decoration {
     justify-content: center;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.custom-btn.shake {
-    animation: shake 0.5s ease-in-out;
 }
 
 .custom-btn:hover {
@@ -711,7 +653,7 @@ body:hover .scrollbar-decoration {
 
 .note-actions {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-top: 20px;
 }
 

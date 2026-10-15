@@ -3,7 +3,7 @@ const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 const createHeart = (container, options = {}) => {
     if (!container) return null;
     const heart = document.createElement('div');
-    heart.classList.add(options.className || 'heart');
+    heart.classList.add(...(options.className || 'heart').split(/\s+/));
     if (options.fixed) {
         heart.style.position = 'fixed';
     }
